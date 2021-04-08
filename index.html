@@ -257,6 +257,8 @@
 		if(shouldCalcOnOp)
 			{
 				b = parseFloat(entry.value)
+				if(Number.isNaN(b))
+					b = a	// so we can do an op on the same number like 2x= is the same as 2x2=
 				console.log("val2: ", b)
 			}
 			calculate()
