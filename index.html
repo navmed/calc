@@ -28,6 +28,8 @@
 	body,* { 
 		box-sizing: border-box;
 		font-family: Lato;
+		margin: 0; 
+		padding: 0;
 	}
 
 	input.entry {
@@ -93,13 +95,26 @@
 		grid-gap: 1rem;
 		grid-row-gap: 1rem;
 	}
+
+@media (max-width: 400px)
+{
+	.main{
+		width: 100vw;
+	}
+	input.entry{
+		width: calc(100vw - 2rem);
+	}
+	.buttons{
+		width: calc(100vw - 2rem);
+	}
+}
 </style>
 
 
 
 <body>
 	<div class="main">
-		<input class="entry" maxlength="12">
+		<input class="entry" maxlength="12" inputmode="numeric">
 		<div class="buttons">
 			<button onclick="allClear()">AC</button>
 			<button onclick="backSpace()">❮</button>
